@@ -17,9 +17,9 @@ clc;
 clear all;
 
 arg = struct(...
-    'ifiles', 'D:\SIMreconProject\Sirecon',...      % input file (or data folder in TIFF mode)
+    'ifiles', 'D:\SIMreconProject\Sirecon\DataForTest',...      % input file (or data folder in TIFF mode)
     'ofiles', 'U2OS_Tomm20_3DSIM(1P35NA)',...                       % output file (or filename pattern in TIFF mode)
-    'otffiles', 'D:\SIMreconProject\Sirecon\OTF_3DSIM_1P35NA_488.tif',... % OTF file    
+    'otffiles', 'D:\SIMreconProject\Sirecon\OTF\OTF_3DSIM_1P35NA_488.tif',... % OTF file    
     'usecorr', [],...                   % flat-field correction file provided
     'ndirs', 3,...                      % number of directions
     'nphases', 5,...                    % number of phases per direction
