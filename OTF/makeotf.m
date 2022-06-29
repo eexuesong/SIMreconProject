@@ -14,7 +14,7 @@ clc;
 
 % NA = 1.35;          % Emission numerical aperture
 NA = 1.27;
-lamda = 488;        % Excitation wavelength
+lambda = 488;        % Excitation wavelength
 % lamda = 561;
 twolens = false;    % Whether using mirror-based 4-beam SIM acquisition
 
@@ -41,7 +41,7 @@ scalefactor = 1.0;
 if NA == 1.27
     k0angleguess = (-80.2723) / 180 * pi;   % Estimated angle of the 1st orientation
     NIMM = 1.333;                       % Refractive index of immersion medium
-    if lamda == 488
+    if lambda == 488
         wavelength = 525;               % Fluorescence emmision wavelength 488 nm / 525 nm;
         linespacing = 0.209169;         % Line spacing of SIM pattern in microns, 0.20911 um for 488 nm channel 1.27 NA.
         if twolens
@@ -53,7 +53,7 @@ if NA == 1.27
             ofiles = 'OTF_3DSIM_1P27NA_488.tif';
             ileavekz = [0, 0, 11, 12, 0, 0, 0];     % wavelength = 525; Water (RI = 1.333)
         end
-    elseif lamda == 561
+    elseif lambda == 561
         wavelength = 607;               % Fluorescence excitation/emmision wavelength 561 nm / 607 nm;
         linespacing = 0.240117;         % Line spacing of SIM pattern in microns, 0.240117 um for 561 nm channel 1.27 NA.
         if twolens
@@ -71,7 +71,7 @@ if NA == 1.27
 elseif NA == 1.35
     k0angleguess = (-11.062) / 180 * pi;    % Estimated angle of the 1st orientation
     NIMM = 1.406;                       % Refractive index of immersion medium
-    if lamda == 488
+    if lambda == 488
         wavelength = 525;               % Fluorescence emmision wavelength 488 nm / 525 nm;
         linespacing = 0.199378;         % Line spacing of SIM pattern in microns, 0.199315 for 488 nm channel 1.35 NA.
         if twolens
@@ -83,7 +83,7 @@ elseif NA == 1.35
             ofiles = 'OTF_3DSIM_1P35NA_488.tif';
             ileavekz = [0, 0, 12, 13, 0, 0, 0];     % wavelength = 525; Iodixanol (45.6% w/v RI = 1.406)
         end
-    elseif lamda == 561
+    elseif lambda == 561
         wavelength = 607;               % Fluorescence excitation/emmision wavelength 561 nm / 607 nm;
         linespacing = 0.228782;         % Line spacing of SIM pattern in microns, 0.228782 for 561 nm channel 1.35 NA.
         if twolens
